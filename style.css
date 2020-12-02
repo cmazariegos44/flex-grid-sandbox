@@ -8,34 +8,35 @@ html, body {
     margin: 0;
 }
 
-main { 
-    border: solid 1px black;
-    width: 300px;
-    display: flex;
-    /* justify content governs the primary axis */
-    justify-content: center;
-    /* align items governs the secondary axis */
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
+.little {
+    border: solid 1px black
 }
 
 .green {
     background-color: lightgreen;
+    grid-area: green-booger-box;
 }
 
 .blue {
     background-color: lightblue;
+    grid-area: blue-some-other-designation;
 }
 
 .pink {
     background-color: pink;
+    grid-area: pink;
 }
 
 .yellow {
     background-color: lightgoldenrodyellow;
+    grid-area: yellow;
 }
+
+main { 
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+        "pink . green-booger-box green-booger-box"
+        "yellow yellow . blue-some-other-designation"
+    }
